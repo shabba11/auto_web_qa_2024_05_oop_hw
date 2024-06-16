@@ -18,6 +18,14 @@ class Figure(ABC):
         pass
 
     def add_area(self, other_figure):
+        """
+
+        Args:
+            other_figure: Фигура
+
+        Return: Сумма площадей фигур
+
+        """
         if not isinstance(other_figure, Figure):
             raise ValueError("В метод add_area должен передаваться класс Figure")
         return self.get_area + other_figure.get_area

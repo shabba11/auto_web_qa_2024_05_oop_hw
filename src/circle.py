@@ -5,6 +5,10 @@ from math import pi
 class Circle(Figure):
     """
     Класс для работы с кругом
+
+    Args:
+        radius: Радиус круга
+
     """
 
     def __init__(self, radius: int):
@@ -13,13 +17,13 @@ class Circle(Figure):
         self.radius = radius
 
     def __str__(self):
-        return "Класс для вычисления периметра и площади круга"
+        return f"Класс для вычисления периметра и площади круга по {self.radius}"
 
     @property
     def get_area(self):
         """
         Вычисление площади круга
-        :return: Площадь круга
+        Return: Площадь круга
         """
         return pi * (self.radius ** 2)
 
@@ -27,6 +31,6 @@ class Circle(Figure):
     def get_perimeter(self):
         """
         Вычисление периметра круга
-        :return: Периметр круга
+        Return: Периметр круга
         """
         return 2 * pi * self.radius
