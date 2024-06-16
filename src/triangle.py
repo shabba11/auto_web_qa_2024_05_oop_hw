@@ -15,7 +15,12 @@ class Triangle(Figure):
 
     def __init__(self, side_a: int, side_b: int, side_c: int):
 
-        if not str(side_a).isnumeric() or not str(side_b).isnumeric() or not str(side_c).isnumeric():
+        if (not (str(side_a).isnumeric() or isinstance(side_a, float))
+                or not (str(side_b).isnumeric() or isinstance(side_b, float))
+                or not (str(side_c).isnumeric() or isinstance(side_c, float))
+                or isinstance(side_a, str)
+                or isinstance(side_b, str)
+                or isinstance(side_c, str)):
             raise ValueError("Одна из переменных не является числом (int)")
         elif side_a <= 0 or side_b <= 0:
             raise ValueError("Стороны не могут быть меньше нуля")
