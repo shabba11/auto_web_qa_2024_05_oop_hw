@@ -12,7 +12,9 @@ class Circle(Figure):
     """
 
     def __init__(self, radius: int):
-        if radius <= 0:
+        if not (str(radius).isnumeric() or isinstance(radius, float)) or isinstance(radius, str):
+            raise ValueError(f"'{radius}' не является числом")
+        elif radius <= 0:
             raise ValueError("Радиус круга не может быть <= 0")
         self.radius = radius
 
