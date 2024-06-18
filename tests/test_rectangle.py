@@ -19,9 +19,8 @@ class TestRectangle:
         """
 
         rectangle = Rectangle(side_a=side_a, side_b=side_b)
-        area = rectangle.get_area
 
-        assert area == result
+        assert rectangle.get_area == result
 
     @pytest.mark.parametrize("side_a, side_b, result",
                              [(1, 4, 10),
@@ -34,9 +33,8 @@ class TestRectangle:
         """
 
         rectangle = Rectangle(side_a=side_a, side_b=side_b)
-        perimeter = rectangle.get_perimeter
 
-        assert perimeter == result
+        assert rectangle.get_perimeter == result
 
     @pytest.mark.parametrize("side_a, side_b",
                              [(1, 0),

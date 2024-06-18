@@ -16,9 +16,8 @@ class TestFigure:
 
         triangle = Triangle(side_a=3, side_b=4, side_c=5)
         square = Square(side_a=5)
-        sum_area = square.add_area(triangle)
 
-        assert sum_area == 31
+        assert square.add_area(triangle) == 31
 
     def test_figure_error_class(self):
         """

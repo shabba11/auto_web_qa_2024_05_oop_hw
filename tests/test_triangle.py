@@ -12,31 +12,29 @@ class TestTriangle:
                              [(3, 4, 5, 6),
                               (5, 6, 7, 14.696938456699069),
                               (5.5, 5, 1.5, 3.6742346141747673)],
-                             ids=['sides = 1, 4, 3', 'sides = 5, 6, 7', 'sides = 5.5, 3, 1.5'])
+                             ids=['sides = 3, 4, 5', 'sides = 5, 6, 7', 'sides = 5.5, 5, 1.5'])
     def test_triangle_get_area_positive(self, side_a, side_b, side_c, result):
         """
         Вычисление площади треугольника. Позитивный тест
         """
 
         triangle = Triangle(side_a=side_a, side_b=side_b, side_c=side_c)
-        area = triangle.get_area
 
-        assert area == result
+        assert triangle.get_area == result
 
     @pytest.mark.parametrize("side_a, side_b, side_c, result",
                              [(3, 4, 5, 12),
                               (5, 6, 7, 18),
                               (5.5, 5, 1.5, 12)],
-                             ids=['sides = 1, 4, 3', 'sides = 5, 6, 7', 'sides = 5.5, 3, 1.5'])
+                             ids=['sides = 3, 4, 5', 'sides = 5, 6, 7', 'sides = 5.5, 5, 1.5'])
     def test_triangle_get_perimeter_positive(self, side_a, side_b, side_c, result):
         """
         Вычисление периметра треугольника. Позитивный тест
         """
 
         triangle = Triangle(side_a=side_a, side_b=side_b, side_c=side_c)
-        perimeter = triangle.get_perimeter
 
-        assert perimeter == result
+        assert triangle.get_perimeter == result
 
     @pytest.mark.parametrize("side_a, side_b, side_c",
                              [(True, 4, 5),

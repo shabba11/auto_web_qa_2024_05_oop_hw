@@ -19,9 +19,8 @@ class TestSquare:
         """
 
         square = Square(side_a=side_a)
-        area = square.get_area
 
-        assert area == result
+        assert square.get_area == result
 
     @pytest.mark.parametrize("side_a, result",
                              [(1, 4),
@@ -34,9 +33,8 @@ class TestSquare:
         """
 
         square = Square(side_a=side_a)
-        perimeter = square.get_perimeter
 
-        assert perimeter == result
+        assert square.get_perimeter == result
 
     @pytest.mark.parametrize("side_a",
                              [0, -1],

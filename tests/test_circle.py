@@ -19,9 +19,8 @@ class TestCircle:
         """
 
         circle = Circle(radius=radius)
-        area = circle.get_area
 
-        assert area == result
+        assert circle.get_area == result
 
     @pytest.mark.parametrize("radius, result",
                              [(15, 94.24777960769379),
@@ -34,9 +33,8 @@ class TestCircle:
         """
 
         circle = Circle(radius=radius)
-        perimeter = circle.get_perimeter
 
-        assert perimeter == result
+        assert circle.get_perimeter == result
 
     @pytest.mark.parametrize("radius",
                              [0, -1],
